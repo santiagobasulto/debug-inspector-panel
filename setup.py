@@ -18,7 +18,9 @@ setup(
     license = "MIT",
     keywords = "debugger django-debug-toolbar panels",
     url = "https://github.com/santiagobasulto/debug-inspector-panel",
-    packages=['inspector-panel', 'tests'],
+    packages=['inspector_panel', 'inspector_panel.panels'],
+    package_data={'inspector_panel': ['templates/*', ]},
+    include_package_data=True,
     long_description=read('README.md'),
     classifiers=[
         "Development Status :: 3 - Alpha",
