@@ -1,0 +1,39 @@
+<style>
+    .var_display{
+        width: 200px;
+    }
+    .var_display li{
+        list-style: square;
+    }
+</style>
+<h4>Displaying {{count}} records</h4>
+<table>
+    <thead>
+        <tr>
+            <th>Value</th>
+            <th>Class</th>
+            <th>Module</th>
+            <th>Defined at</th>
+            <th>Local variables</th>
+            <th>Invoked at</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for record in records %}
+            <tr class="{% cycle 'djDebugOdd' 'djDebugEven' %}">
+                <td>{{ record.value }}</td>
+                <td>{{ record.class_name }}</td>
+                <th>{{record.module_name}}</th>
+                <td>{{record.source_file}}</td>
+                <td style='padding-left:20px;'>
+                    <ul class='var_display'>
+                        {% for local in record.locals%}
+                            <li> {{local}} </li>
+                        {% endfor %}
+                    </ul>
+                </td>
+                <td><b>{{ record.invoked.file }}</b> @ line <b>{{ record.invoked.line }}</b> inside <b>{{ record.invoked.function }}</b> view</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
