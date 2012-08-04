@@ -36,7 +36,7 @@ And you can optionally get the same info in the console:
 
 ### Installation
 
-    $ pip install inspector_panel
+    $ pip install git+git://github.com/santiagobasulto/debug-inspector-panel
 
 Add the panel to the `DEBUG_TOOLBAR_PANELS` settings variable: 
 
