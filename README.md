@@ -74,11 +74,11 @@ and use it to debug whatever you want:
 
 Optionally you can disable console logging:
 
-    debug([1, 2, 3], console=True)
+    debug([1, 2, 3], console=False)
 
 ### Important!
 
-This panel is NOT a replacement for other more complete tools as python logging and pdb.
+This panel is NOT a replacement for other more complete tools as [python logging](http://docs.python.org/library/logging.html) and [pdb](http://docs.python.org/library/pdb).
 
 ### License
 
