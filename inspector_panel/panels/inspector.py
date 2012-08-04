@@ -61,7 +61,7 @@ def debug_default(value, record):
     debug_class(__class, record)
 
 
-def debug(value, console=True, *args, **kwargs):
+def debug(value, console=True):
     stack = inspect.stack()[1]
     frm = stack[0]
 
