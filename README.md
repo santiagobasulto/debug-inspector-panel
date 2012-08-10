@@ -1,6 +1,10 @@
 Inspector Panel
 ===============
 
+> So long as I can put `print` statements in the code, and can read it thoroughly, I can usually find the bugs.
+
+*Joshua Bloch*, about his techniques for debugging programs (extracted from [Coders at work](http://goo.gl/WI0RU))
+
 Inspector panel is intended to retrieve information about variables when developing Django applications.
 
 The panel must be used with [django-debug-toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar).

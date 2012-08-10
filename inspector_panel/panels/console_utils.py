@@ -2,6 +2,7 @@ MINIMUM_WIDTH = 22
 TITLE = "Debug Info"
 RIGHT_PADDING = 2
 
+
 def console_debug(record):
     val = generate_line("Value", record.value)
     clas = generate_line("Class", record.class_name)
@@ -13,6 +14,7 @@ def console_debug(record):
     print_complete(module_name, width)
     print_ending(width)
 
+
 def print_title(width):
     free_space = width - (len(TITLE) + 2)
     to_left = free_space / 2
@@ -22,6 +24,7 @@ def print_title(width):
         to_right = to_left - 1
     print "%s %s %s" % ("#" * to_left, TITLE, "#" * to_right)
 
+
 def print_complete(line, width):
     completed_line = line
     if len(line) < width:
@@ -29,11 +32,14 @@ def print_complete(line, width):
         completed_line = "%s%s%s" % (line, " " * to_complete, "#")
     print completed_line
 
+
 def print_ending(width):
     print "#" * width
 
+
 def generate_line(title, value):
     return "# %s: %s" % (title, value)
+
 
 def longest_line_width(lines):
     max_width = MINIMUM_WIDTH
