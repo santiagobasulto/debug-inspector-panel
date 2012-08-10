@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.template.loader import render_to_string
 from debug_toolbar.panels import DebugPanel
 from console_utils import console_debug
@@ -62,6 +63,8 @@ def debug_default(value, record):
 
 
 def debug(value, console=True):
+    if not hasattr(settings, 'DEBUG') or settings.DEBUG is False:
+        return
     stack = inspect.stack()[1]
     frm = stack[0]
 
