@@ -24,7 +24,7 @@ Well, I used to do that a lot. So, I decided to write this simple panel.
 The idea is to use just one function `debug` and get lots of information. Here's an example of a [real Django App](https://github.com/santiagobasulto/guide-to-testing-in-django):
 
     from inspector_panel.panels.inspector import debug
-    
+
     def index(request):
         latest_poll_list = Poll.published.all().order_by('-pub_date')[:5]
         debug(latest_poll_list)  # Just add this line
@@ -63,7 +63,7 @@ Add `inspector_panel` to your `INSTALLED_APPS`
 
 Just import the debug function:
 
-    from inspector_panel.panels.inspector import debug
+    from inspector_panel import debug
 
 and use it to debug whatever you want:
 
