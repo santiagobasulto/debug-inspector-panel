@@ -67,7 +67,7 @@ def debug(value, console=True):
         return
     stack = inspect.stack()[1]
     frm = stack[0]
-
+    print frm.f_locals
     record = DebugRecord()
     record.globals = frm.f_globals
     record.locals = frm.f_locals
