@@ -1,3 +1,5 @@
+# This project has been abandoned. There's an updated version by @hgezim here: https://github.com/hgezim/debug-inspector-panel
+
 Inspector Panel
 ===============
 
